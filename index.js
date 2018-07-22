@@ -1,13 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Image from './src/Image';
-import TextBox from './src/TextBox';
+import ProductCard from './src/ProductCard';
 
 ReactDOM.render(
-    <Image />,
-    document.getElementById('image')
-)
-ReactDOM.render(
-    <TextBox />,
-    document.getElementById('text-box')
+    <ProductCard />,
+    document.getElementById('card')
 )
