@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TextBox extends Component {
-    render() {
-        return <span><SomeText /></span>
-    }
-}
-
-class SomeText extends Component {
-    render() {
-        return 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-    }
-}
+function TextBox({ content }) {
+    return (
+      <span>
+        {content}
+      </span>
+    );
+  }
 
 export default TextBox;

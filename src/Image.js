@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import { products } from '/constants/Products';
+import React from 'react';
 
-class Image extends Component {
-    render() {
-        return <div><img src={products[0].imageUrl} alt={products[0].title} style={{ height: 100, width: 'auto' }}/></div>
-    }
-}
+function Image({ src, alt }) {
+    return (
+      <img src={src} alt={alt} style={{ width: 100, height: 'auto' }} />
+    );
+  }
 
 export default Image;

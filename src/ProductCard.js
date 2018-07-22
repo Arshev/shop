@@ -3,16 +3,18 @@ import Image from './Image';
 import TextBox from './TextBox';
 import Price from './Price';
 
-class ProductCard extends Component {
-    render() {
-        return (
-            <div>
-                <Image /><br />
-                <TextBox /><br />
-                Price: <Price />
-            </div>
-        )
-    }
-}
+function ProductCard({ product }) {
+    return (
+        <div>
+            <Image src={product.imageUrl} alt={product.title} />
+            <p>
+                <TextBox content={product.title} />
+            </p>
+            <p>
+                <Price price={product.price} />
+            </p>
+        </div>
+    );
+  }
 
 export default ProductCard;
