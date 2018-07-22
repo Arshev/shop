@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Catalog from './src/Catalog';
 import products from './constants/Products';
+import CatalogPage from './src/CatalogPage';
 
 
 ReactDOM.render(
-    <Catalog products={products} />,
+    <CatalogPage products={products} />,
     document.getElementById('card')
 )
