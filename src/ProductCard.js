@@ -6,7 +6,7 @@ import Price from './Price';
 function ProductCard({ product }) {
     return (
         <div>
-            <Image src={product.imageUrl} alt={product.title} />
+            <Image src={product.imageUrl} alt={product.title} styleImage={{ width: 100, height: 'auto' }} />
             <p>
                 <TextBox content={product.title} />
             </p>
