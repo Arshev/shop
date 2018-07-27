@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Image from './Image';
 import TextBox from './TextBox';
 import Price from './Price';
 
 function ProductCard({ product }) {
     return (
-        <div>
-            <Image src={product.imageUrl} alt={product.title} styleImage={{ width: 100, height: 'auto' }} />
-            <p>
-                <TextBox content={product.title} />
-            </p>
-            <p>
+        <div className='card mb-3'>
+            <div className='card-header'>
+                <h3><TextBox content={product.title} /></h3>
+            </div>
+            <div className='card-body'>
+                <Image src={product.imageUrl} alt={product.title} styleImage={{height: '100px', width: 'auto'}} />
                 <Price price={product.price} />
-            </p>
+            </div>
         </div>
     );
   }

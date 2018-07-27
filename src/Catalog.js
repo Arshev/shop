@@ -1,15 +1,11 @@
-import React from 'react';
-import ProductCard from './ProductCard';
+import React, { Component } from 'react';
 
-function Catalog({ products }) {
-  const items = products.map(product => (
-    <ProductCard key={product.id} product={product} />
-  ));
-  return (
-    <div>
-      {items}
-    </div>
-  );
+class Catalog extends Component {
+  render() {
+    return (
+      <div>{this.props.children}</div>
+    )
+  }
 }
 
 export default Catalog;
