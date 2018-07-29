@@ -3,7 +3,7 @@ import products from '../constants/Products';
 import ProductCard from './ProductCard';
 import Catalog from './Catalog';
 import Cart from './Cart';
-
+import MyContext from '../context/MyContext';
 class CatalogPage extends Component {
   render() {
     const items = products.map(product => (
@@ -26,17 +26,6 @@ class CatalogPage extends Component {
       
     )
   }
-}
-
-function CatalogPage({ products }) {
-  return (
-    <div>
-      <h1>
-        Products
-      </h1>
-      <Catalog products={products} />
-    </div>
-  );
 }
 
 export default CatalogPage;
