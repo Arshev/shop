@@ -11,6 +11,7 @@ export default class Cart extends Component {
                             <button>
                                 {context.state.count > 0 ? `Items in cart: ${context.state.count}` : 'Cart is empty'}
                             </button>
+                            <span>In Cart: {context.state.item}</span>
                         </React.Fragment>
                     )}
                 </MyContext.Consumer>

@@ -3,7 +3,6 @@ import products from '../constants/Products';
 import ProductCard from './ProductCard';
 import Catalog from './Catalog';
 import Cart from './Cart';
-import MyContext from '../context/MyContext';
 class CatalogPage extends Component {
   render() {
     const items = products.map(product => (

@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 
 export const MyContext = React.createContext();
 
+
+
 export default class CartProvider extends Component {
     constructor(props) {
       super(props);
 
-      this.state = { count: 0 };
+      this.state = { 
+        count: 0,
+        items: []
+      };
     }
-    
+       
     render() {
       return (
         <MyContext.Provider value={{
