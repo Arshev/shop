@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export const MyContext = React.createContext();
+export const CartContext = React.createContext();
 
 
 
@@ -16,14 +16,15 @@ export default class CartProvider extends Component {
        
     render() {
       return (
-        <MyContext.Provider value={{
-          state: this.state,
-          growCount: () => this.setState({
-            count: this.state.count + 1
+        <CartContext.Provider value={{
+          cart: this.state,
+          addProduct: () => this.setState({
+            count: this.state.count + 1,
+            items: this.state.items.push('product')
           })
         }}>
           {this.props.children}
-        </MyContext.Provider>
+        </CartContext.Provider>
       )
     }
   }

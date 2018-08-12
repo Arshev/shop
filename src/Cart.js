@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import {MyContext} from '../context/CartProvider';
+import {CartContext} from '../context/CartProvider';
 
 export default class Cart extends Component {
     render() {
         return(
             <div>
-                <MyContext.Consumer>
+                <CartContext.Consumer>
                     {(context) => (
                         <React.Fragment>
                             <button>
-                                {context.state.count > 0 ? `Items in cart: ${context.state.count}` : 'Cart is empty'}
+                                {context.cart.count > 0 ? `Items in cart: ${context.cart.count}` : 'Cart is empty'}
                             </button>
-                            <span>In Cart: {context.state.item}</span>
+                            <span>In Cart: {console.log(context.cart)}</span>
                         </React.Fragment>
                     )}
-                </MyContext.Consumer>
+                </CartContext.Consumer>
             </div>
         );
     }

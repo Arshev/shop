@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import {MyContext} from '../context/CartProvider';
+import {CartContext} from '../context/CartProvider';
 
 export default class AddToCart extends Component {
     render() {
         return(
             <div>
-                <MyContext.Consumer>
+                <CartContext.Consumer>
                     {(context) => (
                         <React.Fragment>
-                            <button onClick={context.growCount}>Add to Cart</button>
+                            <button onClick={() => context.addProduct(this.props.product)}>Add to Cart</button>
                         </React.Fragment>
                     )}
-                </MyContext.Consumer>
+                </CartContext.Consumer>
             </div>
         );
     }

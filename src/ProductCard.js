@@ -13,7 +13,7 @@ function ProductCard({ product }) {
             <div className='card-body'>
                 <Image src={product.imageUrl} alt={product.title} styleImage={{height: '100px', width: 'auto'}} />
                 <Price price={product.price} />
-                <div><AddToCart /></div>
+                <div><AddToCart product={product}/></div>
             </div>
         </div>
     );
