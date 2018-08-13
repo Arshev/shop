@@ -18,9 +18,9 @@ export default class CartProvider extends Component {
       return (
         <CartContext.Provider value={{
           cart: this.state,
-          addProduct: () => this.setState({
+          addProduct: (product) => this.setState({
             count: this.state.count + 1,
-            items: this.state.items.push('product')
+            items: this.state.items=[product,...this.state.items]
           })
         }}>
           {this.props.children}
