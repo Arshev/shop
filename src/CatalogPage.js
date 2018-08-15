@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import products from '../constants/Products';
 import ProductCard from './ProductCard';
 import Catalog from './Catalog';
-
+import Cart from './Cart';
 class CatalogPage extends Component {
   render() {
     const items = products.map(product => (
@@ -11,6 +11,9 @@ class CatalogPage extends Component {
     return (
       <div>
         <h1>Products</h1>
+        <span>
+          <Cart />
+        </span>
         <div className='row'>
           <div className='col-3'>
             <Catalog>
@@ -22,17 +25,6 @@ class CatalogPage extends Component {
       
     )
   }
-}
-
-function CatalogPage({ products }) {
-  return (
-    <div>
-      <h1>
-        Products
-      </h1>
-      <Catalog products={products} />
-    </div>
-  );
 }
 
 export default CatalogPage;
