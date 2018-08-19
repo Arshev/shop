@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { mainPath } from '../helpers/routes';
+import { mainPath,  contactsPath } from '../helpers/routes';
 import Cart from './Cart';
 export const MainMenu = () => (
     <React.Fragment>
@@ -11,6 +11,9 @@ export const MainMenu = () => (
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
                             <Link to={mainPath()} className="nav-link">Home</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to={contactsPath()} className="nav-link">Contacts</Link>
                         </li>
                     </ul>
                 </div>

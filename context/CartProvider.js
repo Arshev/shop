@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 export const CartContext = React.createContext();
 
-
-
 export default class CartProvider extends Component {
     constructor(props) {
       super(props);
